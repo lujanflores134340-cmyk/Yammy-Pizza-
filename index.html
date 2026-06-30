@@ -16,6 +16,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Plus Jakarta Sans',sans-serif;color:#222222;background:#ffffff;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
 button{font-family:inherit;border:none;background:none}
 a{text-decoration:none;color:inherit}
 .yp-disp{font-family:'Fredoka',sans-serif;font-weight:700}
@@ -26,21 +27,53 @@ a{text-decoration:none;color:inherit}
 @keyframes spinslow{to{transform:rotate(360deg)}}
 @keyframes pop{0%{transform:translate(-50%,16px) scale(.92);opacity:0}100%{transform:translate(-50%,0) scale(1);opacity:1}}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(max-width:1100px){
+ .yp-h1{font-size:54px !important}
+ .yp-hero-pizza{width:380px !important;height:380px !important}
+}
 @media(max-width:920px){
  .yp-nav-links{display:none !important}
  .yp-burger{display:inline-flex !important}
- .yp-hero{grid-template-columns:1fr !important;text-align:center}
+ .yp-hero{grid-template-columns:1fr !important;text-align:center;gap:30px !important}
  .yp-hero-art{order:-1}
  .yp-cta-row{justify-content:center !important}
  .yp-stats{justify-content:center !important}
- .yp-2col{grid-template-columns:1fr !important}
+ .yp-2col{grid-template-columns:1fr !important;padding:30px !important}
  .yp-steps{grid-template-columns:repeat(2,1fr) !important}
+ .yp-section{padding:60px 20px !important}
+ .yp-h1{font-size:48px !important}
+ .yp-section-h2{font-size:36px !important}
+ .yp-hero-pizza{width:340px !important;height:340px !important}
+ .yp-retiro-art{min-height:260px !important}
+}
+@media(max-width:720px){
+ .yp-h1{font-size:38px !important}
+ .yp-hero-pizza{width:280px !important;height:280px !important}
+ .yp-section-h2{font-size:30px !important}
+ .yp-promo-header{flex-direction:column;align-items:flex-start !important}
+ .yp-stats > div:not([style*="width:1px"]){flex:1;min-width:96px}
 }
 @media(max-width:560px){
- .yp-h1{font-size:40px !important}
- .yp-section{padding:54px 18px !important}
- .yp-hero-pizza{width:300px !important;height:300px !important}
+ .yp-h1{font-size:34px !important}
+ .yp-section{padding:46px 16px !important}
+ .yp-hero-pizza{width:240px !important;height:240px !important}
  .yp-steps{grid-template-columns:1fr !important}
+ .yp-2col{padding:24px !important;border-radius:22px !important}
+ .yp-section-h2{font-size:26px !important}
+ .yp-pizza-img{width:140px !important;height:140px !important;border-width:6px !important}
+ .yp-header-cta{display:none !important}
+ .yp-stats{gap:14px !important}
+ .yp-stats > div[style*="width:1px"]{display:none !important}
+ .yp-retiro-img{width:100% !important;max-width:340px;height:240px !important}
+ .yp-promo-img{height:130px !important}
+ .yp-hero-section{padding:40px 16px 60px !important}
+ .yp-extras-card{padding:30px 22px !important;border-radius:22px !important}
+}
+@media(max-width:420px){
+ .yp-h1{font-size:30px !important}
+ .yp-disp[style*="font-size:22px"]{font-size:19px !important}
+ .yp-hero-pizza{width:220px !important;height:220px !important}
+ .yp-cta-row a{font-size:15px !important;padding:13px 20px !important}
 }
 </style>
 </helmet>
@@ -87,7 +120,7 @@ a{text-decoration:none;color:inherit}
   </header>
 
   <!-- ============ HERO ============ -->
-  <section id="inicio" data-screen-label="Hero" class="yp-section" style="padding:60px 24px 84px;background:radial-gradient(circle at 82% 18%,#fff4e0 0%,#ffffff 58%)">
+  <section id="inicio" data-screen-label="Hero" class="yp-section yp-hero-section" style="padding:60px 24px 84px;background:radial-gradient(circle at 82% 18%,#fff4e0 0%,#ffffff 58%)">
     <div class="yp-hero" style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center">
       <div>
         <span style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #ffe1c2;color:#E63946;font-weight:800;font-size:13px;padding:8px 14px;border-radius:999px;box-shadow:0 6px 16px rgba(0,0,0,0.05);white-space:nowrap">🛵 Te la llevamos — ¡recién horneada!</span>
@@ -107,7 +140,7 @@ a{text-decoration:none;color:inherit}
       </div>
       <div class="yp-hero-art" style="position:relative;display:flex;align-items:center;justify-content:center;min-height:400px">
         <div style="position:absolute;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle,#ffe7c0,transparent 66%)"></div>
-        <img src="assets/logo-yummy.png" alt="Yummy Pizza" class="yp-hero-pizza" style="width:440px;height:440px;object-fit:contain;position:relative;z-index:1;animation:floaty2 6s ease-in-out infinite;filter:drop-shadow(0 26px 40px rgba(140,80,20,0.26));mix-blend-mode:multiply"/>
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=85" alt="Pizza recién horneada" class="yp-hero-pizza" style="width:440px;height:440px;object-fit:cover;border-radius:50%;position:relative;z-index:1;animation:floaty2 6s ease-in-out infinite;box-shadow:0 26px 50px rgba(140,80,20,0.32);border:10px solid #fff"/>
         <sc-if value="{{ floatIngredients }}" hint-placeholder-val="{{ true }}">
           <span style="position:absolute;top:4%;left:6%;font-size:40px;animation:floaty 5s ease-in-out infinite;filter:drop-shadow(0 8px 10px rgba(0,0,0,.15));z-index:2">🍅</span>
           <span style="position:absolute;top:12%;right:2%;font-size:38px;animation:floaty 6s ease-in-out .6s infinite;filter:drop-shadow(0 8px 10px rgba(0,0,0,.15));z-index:2">🧀</span>
@@ -143,19 +176,21 @@ a{text-decoration:none;color:inherit}
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:20px">
         <sc-for list="{{ promos }}" as="pr" hint-placeholder-count="4">
-          <div style="position:relative;border-radius:24px;padding:24px;display:flex;flex-direction:column;min-height:248px;overflow:hidden;border:1px solid #f0ece6;transition:transform .22s,box-shadow .22s;background:{{ pr.bg }}" style-hover="transform:translateY(-8px);box-shadow:0 26px 46px rgba(0,0,0,0.14)">
-            <span class="yp-disp" style="position:absolute;top:16px;right:16px;background:#222222;color:#fff;font-size:14px;padding:6px 13px;border-radius:999px">{{ pr.tag }}</span>
+          <div style="position:relative;border-radius:24px;padding:0;display:flex;flex-direction:column;min-height:248px;overflow:hidden;border:1px solid #f0ece6;transition:transform .22s,box-shadow .22s;background:{{ pr.bg }}" style-hover="transform:translateY(-8px);box-shadow:0 26px 46px rgba(0,0,0,0.14)">
+            <span class="yp-disp" style="position:absolute;top:16px;right:16px;z-index:2;background:#222222;color:#fff;font-size:14px;padding:6px 13px;border-radius:999px">{{ pr.tag }}</span>
+            <img src="{{ pr.image }}" alt="{{ pr.name }}" class="yp-promo-img" style="width:100%;height:160px;object-fit:cover;display:block"/>
+            <div style="padding:20px 22px 22px;display:flex;flex-direction:column;flex:1">
             <sc-if value="{{ pr.pickup }}" hint-placeholder-val="{{ false }}">
               <span style="display:inline-flex;align-items:center;gap:6px;align-self:flex-start;background:#43A047;color:#fff;font-weight:800;font-size:12px;padding:6px 11px;border-radius:999px;margin-bottom:10px">🏪 Ahorrás retirando tu pedido</span>
             </sc-if>
-            <div style="font-size:36px;margin-top:auto">{{ pr.emoji }}</div>
-            <div class="yp-disp" style="font-size:22px;line-height:1.05;margin-top:8px;color:#222">{{ pr.name }}</div>
+            <div class="yp-disp" style="font-size:22px;line-height:1.05;margin-top:0;color:#222">{{ pr.name }}</div>
             <div style="font-size:13px;color:#6b655e;margin-top:4px">{{ pr.desc }}</div>
             <div style="display:flex;align-items:baseline;gap:10px;margin-top:14px">
               <span class="yp-disp" style="font-size:26px;color:#E63946">{{ pr.nowText }}</span>
               <span style="font-size:14px;color:#9a948c;text-decoration:line-through">{{ pr.wasText }}</span>
             </div>
             <button onClick="{{ pr.onAdd }}" class="yp-disp" style="margin-top:14px;background:#222222;color:#fff;border-radius:999px;padding:12px;font-size:15px;cursor:pointer;transition:transform .15s,background .15s" style-hover="background:#E63946;transform:translateY(-2px)" style-active="transform:scale(.97)">Agregar combo</button>
+            </div>
           </div>
         </sc-for>
       </div>
@@ -182,7 +217,7 @@ a{text-decoration:none;color:inherit}
               <sc-if value="{{ pz.hasBadge }}" hint-placeholder-val="{{ true }}">
                 <span style="position:absolute;top:16px;left:16px;color:#fff;font-size:11.5px;font-weight:800;padding:6px 11px;border-radius:999px;z-index:2;letter-spacing:.02em;background:{{ pz.badgeColor }}">{{ pz.badge }}</span>
               </sc-if>
-              <image-slot id="{{ pz.slotId }}" shape="circle" fit="cover" placeholder="{{ pz.slotLabel }}" style="width:170px;height:170px;border:9px solid #d98e3c;border-radius:50%;box-shadow:inset 0 0 0 9px rgba(201,123,42,0.22),0 14px 26px rgba(140,80,20,0.24);background:radial-gradient(circle at 50% 35%,#fff3d6,#f0dcb4)"></image-slot>
+              <img src="{{ pz.image }}" alt="{{ pz.name }}" class="yp-pizza-img" style="width:170px;height:170px;border-radius:50%;object-fit:cover;border:8px solid #fff;box-shadow:0 14px 26px rgba(140,80,20,0.28)"/>
             </div>
             <div style="padding:6px 22px 22px;display:flex;flex-direction:column;flex:1">
               <div class="yp-disp" style="font-size:21px;color:#222">{{ pz.name }}</div>
@@ -243,11 +278,10 @@ a{text-decoration:none;color:inherit}
         </div>
         <a href="#promos" class="yp-disp" style="display:inline-flex;align-items:center;gap:9px;margin-top:24px;background:#43A047;color:#fff;border-radius:999px;padding:15px 26px;font-size:16px;cursor:pointer;box-shadow:0 12px 26px rgba(67,160,71,0.32);transition:transform .15s,box-shadow .15s" style-hover="transform:translateY(-2px);box-shadow:0 18px 32px rgba(67,160,71,0.44)" style-active="transform:translateY(1px) scale(.98)">Ver promociones de retiro →</a>
       </div>
-      <div style="position:relative;display:flex;align-items:center;justify-content:center;min-height:280px">
+      <div class="yp-retiro-art" style="position:relative;display:flex;align-items:center;justify-content:center;min-height:320px">
         <div style="position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,#e8f5e9,transparent 70%)"></div>
-        <div style="position:relative;font-size:150px;animation:bob 4s ease-in-out infinite;filter:drop-shadow(0 18px 24px rgba(0,0,0,0.12))">🧑‍🍳</div>
-        <div style="position:absolute;bottom:18%;right:14%;font-size:84px;animation:floaty 5s ease-in-out infinite">🍕</div>
-        <span style="position:absolute;top:16%;left:12%;background:#fff;border:1px solid #eee;border-radius:14px;padding:9px 14px;font-weight:800;font-size:13px;color:#43A047;box-shadow:0 10px 22px rgba(0,0,0,0.08);animation:bob 4s ease-in-out .5s infinite">¡Tu pedido está listo! 🎉</span>
+        <img src="https://images.unsplash.com/photo-1542834369-f10ebf06d3e0?auto=format&fit=crop&w=700&q=85" alt="Pizzero preparando pizza" class="yp-retiro-img" style="width:380px;height:300px;object-fit:cover;border-radius:24px;box-shadow:0 22px 40px rgba(0,0,0,0.18);position:relative;z-index:1;animation:bob 5s ease-in-out infinite"/>
+        <span style="position:absolute;top:8%;left:4%;z-index:2;background:#fff;border:1px solid #eee;border-radius:14px;padding:10px 16px;font-weight:800;font-size:13px;color:#43A047;box-shadow:0 10px 22px rgba(0,0,0,0.12);animation:bob 4s ease-in-out .5s infinite">¡Tu pedido está listo! 🎉</span>
       </div>
     </div>
   </section>
@@ -358,9 +392,9 @@ a{text-decoration:none;color:inherit}
         </div>
         <div>
           <div class="yp-disp" style="font-size:16px;margin-bottom:14px;color:#F4B400">Nuestro local</div>
-          <div style="border-radius:16px;overflow:hidden;border:1px solid #3a3a3a;background:repeating-linear-gradient(45deg,#2a2a2a,#2a2a2a 12px,#262626 12px,#262626 24px);height:120px;display:flex;align-items:center;justify-content:center;position:relative">
-            <span style="font-size:36px">📍</span>
-            <span style="position:absolute;bottom:8px;left:10px;font-size:11px;font-family:monospace;color:#777">[ mapa del local ]</span>
+          <div style="border-radius:16px;overflow:hidden;border:1px solid #3a3a3a;height:120px;position:relative">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80" alt="Nuestro local Yummy Pizza" style="width:100%;height:100%;object-fit:cover"/>
+            <span style="position:absolute;bottom:8px;left:10px;background:rgba(0,0,0,0.65);color:#fff;font-size:11px;padding:4px 8px;border-radius:6px;font-weight:700">📍 Av. Mariscal López 1234</span>
           </div>
         </div>
       </div>
@@ -466,18 +500,18 @@ class Component extends DCLogic {
   ];
 
   pizzasData = [
-    { id: 'muzza', name: 'Muzzarella Clásica', desc: 'La de siempre, la que nunca falla.', ingredients: 'Salsa, muzzarella, orégano', base: 28000, cats: ['clasicas','favoritas'], badge: 'Más vendida', badgeColor: '#E63946', top: 'cheese' },
-    { id: 'napo', name: 'Napolitana', desc: 'Tomate fresco y ajo, bien italiana.', ingredients: 'Muzza, tomate, ajo, albahaca', base: 32000, cats: ['clasicas'], top: 'tomato' },
-    { id: 'pepe', name: 'Pepperoni Fuego', desc: 'Doble pepperoni para los intensos.', ingredients: 'Muzza, pepperoni, ají molido', base: 38000, cats: ['picantes','favoritas'], badge: 'Picante', badgeColor: '#E63946', top: 'pepperoni' },
-    { id: 'diabla', name: 'Diabla', desc: 'Picante de verdad, no apta para tímidos.', ingredients: 'Muzza, salame, jalapeño, chili', base: 40000, cats: ['picantes'], badge: 'Picante', badgeColor: '#E63946', top: 'pepperoni' },
-    { id: 'cuatro', name: 'Cuatro Quesos', desc: 'Una fiesta de quesos derretidos.', ingredients: 'Muzza, provolone, azul, parmesano', base: 42000, cats: ['queso','favoritas'], badge: 'Mucho queso', badgeColor: '#F4B400', top: 'cheese' },
-    { id: 'provo', name: 'Provolone', desc: 'Provolone fundido y orégano.', ingredients: 'Muzza, provolone, orégano', base: 39000, cats: ['queso'], top: 'cheese' },
-    { id: 'casa', name: 'Especial de la Casa', desc: 'Nuestra receta secreta, cargada de todo.', ingredients: 'Muzza, jamón, morrón, huevo, aceitunas', base: 45000, cats: ['especiales'], badge: 'Nueva', badgeColor: '#43A047', top: 'mixed' },
-    { id: 'bacon', name: 'Bacon Lovers', desc: 'Tocino crocante en cada bocado.', ingredients: 'Muzza, bacon, cebolla, BBQ', base: 48000, cats: ['especiales','premium'], top: 'bacon' },
-    { id: 'suprema', name: 'Suprema Premium', desc: 'Cargada de ingredientes de primera.', ingredients: 'Muzza, lomo, champiñón, morrón, aceitunas', base: 55000, cats: ['premium','favoritas'], badge: 'Premium', badgeColor: '#222222', top: 'premium' },
-    { id: 'veg', name: 'Vegetariana Huerta', desc: 'Frescura de la huerta en cada porción.', ingredients: 'Muzza, zucchini, morrón, rúcula, cherry', base: 36000, cats: ['vegetarianas'], badge: 'Vegetariana', badgeColor: '#43A047', top: 'veggie' },
-    { id: 'hawai', name: 'Hawaiana', desc: 'El dúo dulce-salado que divide al mundo.', ingredients: 'Muzza, jamón, ananá', base: 40000, cats: ['gourmet'], top: 'hawaiana' },
-    { id: 'trufa', name: 'Trufa & Hongos', desc: 'Hongos salteados y aceite de trufa.', ingredients: 'Muzza, portobello, trufa, parmesano', base: 58000, cats: ['gourmet','premium'], badge: 'Gourmet', badgeColor: '#F4B400', top: 'mushroom' },
+    { id: 'muzza', name: 'Muzzarella Clásica', desc: 'La de siempre, la que nunca falla.', ingredients: 'Salsa, muzzarella, orégano', base: 28000, cats: ['clasicas','favoritas'], badge: 'Más vendida', badgeColor: '#E63946', top: 'cheese', image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=400&q=80' },
+    { id: 'napo', name: 'Napolitana', desc: 'Tomate fresco y ajo, bien italiana.', ingredients: 'Muzza, tomate, ajo, albahaca', base: 32000, cats: ['clasicas'], top: 'tomato', image: 'https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?auto=format&fit=crop&w=400&q=80' },
+    { id: 'pepe', name: 'Pepperoni Fuego', desc: 'Doble pepperoni para los intensos.', ingredients: 'Muzza, pepperoni, ají molido', base: 38000, cats: ['picantes','favoritas'], badge: 'Picante', badgeColor: '#E63946', top: 'pepperoni', image: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=400&q=80' },
+    { id: 'diabla', name: 'Diabla', desc: 'Picante de verdad, no apta para tímidos.', ingredients: 'Muzza, salame, jalapeño, chili', base: 40000, cats: ['picantes'], badge: 'Picante', badgeColor: '#E63946', top: 'pepperoni', image: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=400&q=80' },
+    { id: 'cuatro', name: 'Cuatro Quesos', desc: 'Una fiesta de quesos derretidos.', ingredients: 'Muzza, provolone, azul, parmesano', base: 42000, cats: ['queso','favoritas'], badge: 'Mucho queso', badgeColor: '#F4B400', top: 'cheese', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80' },
+    { id: 'provo', name: 'Provolone', desc: 'Provolone fundido y orégano.', ingredients: 'Muzza, provolone, orégano', base: 39000, cats: ['queso'], top: 'cheese', image: 'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=400&q=80' },
+    { id: 'casa', name: 'Especial de la Casa', desc: 'Nuestra receta secreta, cargada de todo.', ingredients: 'Muzza, jamón, morrón, huevo, aceitunas', base: 45000, cats: ['especiales'], badge: 'Nueva', badgeColor: '#43A047', top: 'mixed', image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=400&q=80' },
+    { id: 'bacon', name: 'Bacon Lovers', desc: 'Tocino crocante en cada bocado.', ingredients: 'Muzza, bacon, cebolla, BBQ', base: 48000, cats: ['especiales','premium'], top: 'bacon', image: 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=400&q=80' },
+    { id: 'suprema', name: 'Suprema Premium', desc: 'Cargada de ingredientes de primera.', ingredients: 'Muzza, lomo, champiñón, morrón, aceitunas', base: 55000, cats: ['premium','favoritas'], badge: 'Premium', badgeColor: '#222222', top: 'premium', image: 'https://images.unsplash.com/photo-1542587222-f9172d8d8b0e?auto=format&fit=crop&w=400&q=80' },
+    { id: 'veg', name: 'Vegetariana Huerta', desc: 'Frescura de la huerta en cada porción.', ingredients: 'Muzza, zucchini, morrón, rúcula, cherry', base: 36000, cats: ['vegetarianas'], badge: 'Vegetariana', badgeColor: '#43A047', top: 'veggie', image: 'https://images.unsplash.com/photo-1571066811602-716837d681de?auto=format&fit=crop&w=400&q=80' },
+    { id: 'hawai', name: 'Hawaiana', desc: 'El dúo dulce-salado que divide al mundo.', ingredients: 'Muzza, jamón, ananá', base: 40000, cats: ['gourmet'], top: 'hawaiana', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80' },
+    { id: 'trufa', name: 'Trufa & Hongos', desc: 'Hongos salteados y aceite de trufa.', ingredients: 'Muzza, portobello, trufa, parmesano', base: 58000, cats: ['gourmet','premium'], badge: 'Gourmet', badgeColor: '#F4B400', top: 'mushroom', image: 'https://images.unsplash.com/photo-1548369937-47519962c11a?auto=format&fit=crop&w=400&q=80' },
   ];
 
   extrasData = [
@@ -493,10 +527,10 @@ class Component extends DCLogic {
   ];
 
   promosData = [
-    { id: 'p1', name: '2 Muzzarellas + Gaseosa', desc: 'Para compartir en casa.', emoji: '🍕🍕', was: 84000, now: 69000, tag: '-18%', bg: 'linear-gradient(135deg,#fff,#fff2f2)', pickup: false },
-    { id: 'p2', name: 'Familiar + Papas', desc: 'Pizza familiar + papas grandes.', emoji: '🍕🍟', was: 95000, now: 79000, tag: '-17%', bg: 'linear-gradient(135deg,#fff,#fff8e8)', pickup: false },
-    { id: 'p3', name: 'Combo Pareja', desc: '2 medianas + 2 bebidas.', emoji: '❤️🍕', was: 88000, now: 72000, tag: '-18%', bg: 'linear-gradient(135deg,#fff,#fff2f2)', pickup: false },
-    { id: 'p4', name: 'Promo Retiro en Local', desc: 'Una grande retirándola vos.', emoji: '🏪🍕', was: 48000, now: 39000, tag: '-19%', bg: 'linear-gradient(135deg,#fff,#eef7ef)', pickup: true },
+    { id: 'p1', name: '2 Muzzarellas + Gaseosa', desc: 'Para compartir en casa.', emoji: '🍕🍕', was: 84000, now: 69000, tag: '-18%', bg: 'linear-gradient(135deg,#fff,#fff2f2)', pickup: false, image: 'https://images.unsplash.com/photo-1593504049359-74330189a345?auto=format&fit=crop&w=600&q=80' },
+    { id: 'p2', name: 'Familiar + Papas', desc: 'Pizza familiar + papas grandes.', emoji: '🍕🍟', was: 95000, now: 79000, tag: '-17%', bg: 'linear-gradient(135deg,#fff,#fff8e8)', pickup: false, image: 'https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?auto=format&fit=crop&w=600&q=80' },
+    { id: 'p3', name: 'Combo Pareja', desc: '2 medianas + 2 bebidas.', emoji: '❤️🍕', was: 88000, now: 72000, tag: '-18%', bg: 'linear-gradient(135deg,#fff,#fff2f2)', pickup: false, image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80' },
+    { id: 'p4', name: 'Promo Retiro en Local', desc: 'Una grande retirándola vos.', emoji: '🏪🍕', was: 48000, now: 39000, tag: '-19%', bg: 'linear-gradient(135deg,#fff,#eef7ef)', pickup: true, image: 'https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=600&q=80' },
   ];
 
   benefits = [
@@ -643,7 +677,7 @@ class Component extends DCLogic {
       return {
         name: p.name, desc: p.desc, ingredients: p.ingredients,
         hasBadge: !!p.badge, badge: p.badge || '', badgeColor: p.badgeColor || '#E63946',
-        imgBg: this.pizzaBg(p.top), slotId: 'pz-' + p.id, slotLabel: 'Foto de ' + p.name,
+        image: p.image, imgBg: this.pizzaBg(p.top), slotId: 'pz-' + p.id, slotLabel: 'Foto de ' + p.name,
         sizeOptions, priceText: this.fmt(unit), sizeText: sd.label,
         onAdd: () => this.addItem({ key: p.id + '-' + sizeKey, name: p.name + ' (' + sd.label + ')', sub: sd.label, unit }),
         onDetails: () => this.flash(p.name + ': ' + p.ingredients),
@@ -661,7 +695,7 @@ class Component extends DCLogic {
     }));
 
     const promos = this.promosData.map(pr => ({
-      name: pr.name, desc: pr.desc, emoji: pr.emoji, tag: pr.tag, bg: pr.bg, pickup: pr.pickup,
+      name: pr.name, desc: pr.desc, emoji: pr.emoji, tag: pr.tag, bg: pr.bg, pickup: pr.pickup, image: pr.image,
       nowText: this.fmt(pr.now), wasText: this.fmt(pr.was),
       onAdd: () => this.addItem({ key: 'promo-' + pr.id, name: pr.name, sub: 'Combo', unit: pr.now }),
     }));
