@@ -140,7 +140,7 @@ a{text-decoration:none;color:inherit}
       </div>
       <div class="yp-hero-art" style="position:relative;display:flex;align-items:center;justify-content:center;min-height:400px">
         <div style="position:absolute;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle,#ffe7c0,transparent 66%)"></div>
-        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=85" alt="Pizza recién horneada" class="yp-hero-pizza" style="width:440px;height:440px;object-fit:cover;border-radius:50%;position:relative;z-index:1;animation:floaty2 6s ease-in-out infinite;box-shadow:0 26px 50px rgba(140,80,20,0.32);border:10px solid #fff"/>
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&h=800&q=85" alt="Pizza recién horneada" class="yp-hero-pizza" style="width:440px;height:440px;object-fit:cover;object-position:center center;border-radius:50%;position:relative;z-index:1;animation:floaty2 6s ease-in-out infinite;box-shadow:0 26px 50px rgba(140,80,20,0.32);border:10px solid #fff;background:#f7f2ea"/>
         <sc-if value="{{ floatIngredients }}" hint-placeholder-val="{{ true }}">
           <span style="position:absolute;top:4%;left:6%;font-size:40px;animation:floaty 5s ease-in-out infinite;filter:drop-shadow(0 8px 10px rgba(0,0,0,.15));z-index:2">🍅</span>
           <span style="position:absolute;top:12%;right:2%;font-size:38px;animation:floaty 6s ease-in-out .6s infinite;filter:drop-shadow(0 8px 10px rgba(0,0,0,.15));z-index:2">🧀</span>
@@ -178,7 +178,7 @@ a{text-decoration:none;color:inherit}
         <sc-for list="{{ promos }}" as="pr" hint-placeholder-count="4">
           <div style="position:relative;border-radius:24px;padding:0;display:flex;flex-direction:column;min-height:248px;overflow:hidden;border:1px solid #f0ece6;transition:transform .22s,box-shadow .22s;background:{{ pr.bg }}" style-hover="transform:translateY(-8px);box-shadow:0 26px 46px rgba(0,0,0,0.14)">
             <span class="yp-disp" style="position:absolute;top:16px;right:16px;z-index:2;background:#222222;color:#fff;font-size:14px;padding:6px 13px;border-radius:999px">{{ pr.tag }}</span>
-            <img src="{{ pr.image }}" alt="{{ pr.name }}" class="yp-promo-img" style="width:100%;height:160px;object-fit:cover;display:block"/>
+            <img src="{{ pr.image }}" alt="{{ pr.name }}" class="yp-promo-img" loading="lazy" style="width:100%;height:160px;object-fit:cover;object-position:center center;display:block;background:#f7f2ea"/>
             <div style="padding:20px 22px 22px;display:flex;flex-direction:column;flex:1">
             <sc-if value="{{ pr.pickup }}" hint-placeholder-val="{{ false }}">
               <span style="display:inline-flex;align-items:center;gap:6px;align-self:flex-start;background:#43A047;color:#fff;font-weight:800;font-size:12px;padding:6px 11px;border-radius:999px;margin-bottom:10px">🏪 Ahorrás retirando tu pedido</span>
@@ -217,7 +217,7 @@ a{text-decoration:none;color:inherit}
               <sc-if value="{{ pz.hasBadge }}" hint-placeholder-val="{{ true }}">
                 <span style="position:absolute;top:16px;left:16px;color:#fff;font-size:11.5px;font-weight:800;padding:6px 11px;border-radius:999px;z-index:2;letter-spacing:.02em;background:{{ pz.badgeColor }}">{{ pz.badge }}</span>
               </sc-if>
-              <img src="{{ pz.image }}" alt="{{ pz.name }}" class="yp-pizza-img" style="width:170px;height:170px;border-radius:50%;object-fit:cover;border:8px solid #fff;box-shadow:0 14px 26px rgba(140,80,20,0.28)"/>
+              <img src="{{ pz.image }}" alt="{{ pz.name }}" class="yp-pizza-img" loading="lazy" style="width:170px;height:170px;border-radius:50%;object-fit:cover;object-position:center center;border:8px solid #fff;box-shadow:0 14px 26px rgba(140,80,20,0.28);background:#f7f2ea"/>
             </div>
             <div style="padding:6px 22px 22px;display:flex;flex-direction:column;flex:1">
               <div class="yp-disp" style="font-size:21px;color:#222">{{ pz.name }}</div>
@@ -280,7 +280,7 @@ a{text-decoration:none;color:inherit}
       </div>
       <div class="yp-retiro-art" style="position:relative;display:flex;align-items:center;justify-content:center;min-height:320px">
         <div style="position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,#e8f5e9,transparent 70%)"></div>
-        <img src="https://images.unsplash.com/photo-1542834369-f10ebf06d3e0?auto=format&fit=crop&w=700&q=85" alt="Pizzero preparando pizza" class="yp-retiro-img" style="width:380px;height:300px;object-fit:cover;border-radius:24px;box-shadow:0 22px 40px rgba(0,0,0,0.18);position:relative;z-index:1;animation:bob 5s ease-in-out infinite"/>
+        <img src="https://images.unsplash.com/photo-1542834369-f10ebf06d3e0?auto=format&fit=crop&w=700&h=560&q=85" alt="Pizzero preparando pizza" class="yp-retiro-img" loading="lazy" style="width:380px;height:300px;object-fit:cover;object-position:center center;border-radius:24px;box-shadow:0 22px 40px rgba(0,0,0,0.18);position:relative;z-index:1;animation:bob 5s ease-in-out infinite;background:#f7f2ea"/>
         <span style="position:absolute;top:8%;left:4%;z-index:2;background:#fff;border:1px solid #eee;border-radius:14px;padding:10px 16px;font-weight:800;font-size:13px;color:#43A047;box-shadow:0 10px 22px rgba(0,0,0,0.12);animation:bob 4s ease-in-out .5s infinite">¡Tu pedido está listo! 🎉</span>
       </div>
     </div>
@@ -500,18 +500,18 @@ class Component extends DCLogic {
   ];
 
   pizzasData = [
-    { id: 'muzza', name: 'Muzzarella Clásica', desc: 'La de siempre, la que nunca falla.', ingredients: 'Salsa, muzzarella, orégano', base: 28000, cats: ['clasicas','favoritas'], badge: 'Más vendida', badgeColor: '#E63946', top: 'cheese', image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=400&q=80' },
-    { id: 'napo', name: 'Napolitana', desc: 'Tomate fresco y ajo, bien italiana.', ingredients: 'Muzza, tomate, ajo, albahaca', base: 32000, cats: ['clasicas'], top: 'tomato', image: 'https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?auto=format&fit=crop&w=400&q=80' },
-    { id: 'pepe', name: 'Pepperoni Fuego', desc: 'Doble pepperoni para los intensos.', ingredients: 'Muzza, pepperoni, ají molido', base: 38000, cats: ['picantes','favoritas'], badge: 'Picante', badgeColor: '#E63946', top: 'pepperoni', image: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=400&q=80' },
-    { id: 'diabla', name: 'Diabla', desc: 'Picante de verdad, no apta para tímidos.', ingredients: 'Muzza, salame, jalapeño, chili', base: 40000, cats: ['picantes'], badge: 'Picante', badgeColor: '#E63946', top: 'pepperoni', image: 'https://images.unsplash.com/photo-1601924582970-9238bcb495d9?auto=format&fit=crop&w=400&q=80' },
-    { id: 'cuatro', name: 'Cuatro Quesos', desc: 'Una fiesta de quesos derretidos.', ingredients: 'Muzza, provolone, azul, parmesano', base: 42000, cats: ['queso','favoritas'], badge: 'Mucho queso', badgeColor: '#F4B400', top: 'cheese', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80' },
-    { id: 'provo', name: 'Provolone', desc: 'Provolone fundido y orégano.', ingredients: 'Muzza, provolone, orégano', base: 39000, cats: ['queso'], top: 'cheese', image: 'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=400&q=80' },
-    { id: 'casa', name: 'Especial de la Casa', desc: 'Nuestra receta secreta, cargada de todo.', ingredients: 'Muzza, jamón, morrón, huevo, aceitunas', base: 45000, cats: ['especiales'], badge: 'Nueva', badgeColor: '#43A047', top: 'mixed', image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=400&q=80' },
-    { id: 'bacon', name: 'Bacon Lovers', desc: 'Tocino crocante en cada bocado.', ingredients: 'Muzza, bacon, cebolla, BBQ', base: 48000, cats: ['especiales','premium'], top: 'bacon', image: 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=400&q=80' },
-    { id: 'suprema', name: 'Suprema Premium', desc: 'Cargada de ingredientes de primera.', ingredients: 'Muzza, lomo, champiñón, morrón, aceitunas', base: 55000, cats: ['premium','favoritas'], badge: 'Premium', badgeColor: '#222222', top: 'premium', image: 'https://images.unsplash.com/photo-1565299543923-37dd37887442?auto=format&fit=crop&w=400&q=80' },
-    { id: 'veg', name: 'Vegetariana Huerta', desc: 'Frescura de la huerta en cada porción.', ingredients: 'Muzza, zucchini, morrón, rúcula, cherry', base: 36000, cats: ['vegetarianas'], badge: 'Vegetariana', badgeColor: '#43A047', top: 'veggie', image: 'https://images.unsplash.com/photo-1571066811602-716837d681de?auto=format&fit=crop&w=400&q=80' },
-    { id: 'hawai', name: 'Hawaiana', desc: 'El dúo dulce-salado que divide al mundo.', ingredients: 'Muzza, jamón, ananá', base: 40000, cats: ['gourmet'], top: 'hawaiana', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80' },
-    { id: 'trufa', name: 'Trufa & Hongos', desc: 'Hongos salteados y aceite de trufa.', ingredients: 'Muzza, portobello, trufa, parmesano', base: 58000, cats: ['gourmet','premium'], badge: 'Gourmet', badgeColor: '#F4B400', top: 'mushroom', image: 'https://images.unsplash.com/photo-1548369937-47519962c11a?auto=format&fit=crop&w=400&q=80' },
+    { id: 'muzza', name: 'Muzzarella Clásica', desc: 'La de siempre, la que nunca falla.', ingredients: 'Salsa, muzzarella, orégano', base: 28000, cats: ['clasicas','favoritas'], badge: 'Más vendida', badgeColor: '#E63946', top: 'cheese', image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 'napo', name: 'Napolitana', desc: 'Tomate fresco y ajo, bien italiana.', ingredients: 'Muzza, tomate, ajo, albahaca', base: 32000, cats: ['clasicas'], top: 'tomato', image: 'https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 'pepe', name: 'Pepperoni Fuego', desc: 'Doble pepperoni para los intensos.', ingredients: 'Muzza, pepperoni, ají molido', base: 38000, cats: ['picantes','favoritas'], badge: 'Picante', badgeColor: '#E63946', top: 'pepperoni', image: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 'diabla', name: 'Diabla', desc: 'Picante de verdad, no apta para tímidos.', ingredients: 'Muzza, salame, jalapeño, chili', base: 40000, cats: ['picantes'], badge: 'Picante', badgeColor: '#E63946', top: 'pepperoni', image: 'https://images.unsplash.com/photo-1601924582970-9238bcb495d9?auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 'cuatro', name: 'Cuatro Quesos', desc: 'Una fiesta de quesos derretidos.', ingredients: 'Muzza, provolone, azul, parmesano', base: 42000, cats: ['queso','favoritas'], badge: 'Mucho queso', badgeColor: '#F4B400', top: 'cheese', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 'provo', name: 'Provolone', desc: 'Provolone fundido y orégano.', ingredients: 'Muzza, provolone, orégano', base: 39000, cats: ['queso'], top: 'cheese', image: 'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 'casa', name: 'Especial de la Casa', desc: 'Nuestra receta secreta, cargada de todo.', ingredients: 'Muzza, jamón, morrón, huevo, aceitunas', base: 45000, cats: ['especiales'], badge: 'Nueva', badgeColor: '#43A047', top: 'mixed', image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 'bacon', name: 'Bacon Lovers', desc: 'Tocino crocante en cada bocado.', ingredients: 'Muzza, bacon, cebolla, BBQ', base: 48000, cats: ['especiales','premium'], top: 'bacon', image: 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 'suprema', name: 'Suprema Premium', desc: 'Cargada de ingredientes de primera.', ingredients: 'Muzza, lomo, champiñón, morrón, aceitunas', base: 55000, cats: ['premium','favoritas'], badge: 'Premium', badgeColor: '#222222', top: 'premium', image: 'https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 'veg', name: 'Vegetariana Huerta', desc: 'Frescura de la huerta en cada porción.', ingredients: 'Muzza, zucchini, morrón, rúcula, cherry', base: 36000, cats: ['vegetarianas'], badge: 'Vegetariana', badgeColor: '#43A047', top: 'veggie', image: 'https://images.unsplash.com/photo-1571066811602-716837d681de?auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 'hawai', name: 'Hawaiana', desc: 'El dúo dulce-salado que divide al mundo.', ingredients: 'Muzza, jamón, ananá', base: 40000, cats: ['gourmet'], top: 'hawaiana', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 'trufa', name: 'Trufa & Hongos', desc: 'Hongos salteados y aceite de trufa.', ingredients: 'Muzza, portobello, trufa, parmesano', base: 58000, cats: ['gourmet','premium'], badge: 'Gourmet', badgeColor: '#F4B400', top: 'mushroom', image: 'https://images.unsplash.com/photo-1548369937-47519962c11a?auto=format&fit=crop&w=400&h=400&q=80' },
   ];
 
   extrasData = [
@@ -527,10 +527,10 @@ class Component extends DCLogic {
   ];
 
   promosData = [
-    { id: 'p1', name: '2 Muzzarellas + Gaseosa', desc: 'Para compartir en casa.', emoji: '🍕🍕', was: 84000, now: 69000, tag: '-18%', bg: 'linear-gradient(135deg,#fff,#fff2f2)', pickup: false, image: 'https://images.unsplash.com/photo-1593504049359-74330189a345?auto=format&fit=crop&w=600&q=80' },
-    { id: 'p2', name: 'Familiar + Papas', desc: 'Pizza familiar + papas grandes.', emoji: '🍕🍟', was: 95000, now: 79000, tag: '-17%', bg: 'linear-gradient(135deg,#fff,#fff8e8)', pickup: false, image: 'https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?auto=format&fit=crop&w=600&q=80' },
-    { id: 'p3', name: 'Combo Pareja', desc: '2 medianas + 2 bebidas.', emoji: '❤️🍕', was: 88000, now: 72000, tag: '-18%', bg: 'linear-gradient(135deg,#fff,#fff2f2)', pickup: false, image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80' },
-    { id: 'p4', name: 'Promo Retiro en Local', desc: 'Una grande retirándola vos.', emoji: '🏪🍕', was: 48000, now: 39000, tag: '-19%', bg: 'linear-gradient(135deg,#fff,#eef7ef)', pickup: true, image: 'https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=600&q=80' },
+    { id: 'p1', name: '2 Muzzarellas + Gaseosa', desc: 'Para compartir en casa.', emoji: '🍕🍕', was: 84000, now: 69000, tag: '-18%', bg: 'linear-gradient(135deg,#fff,#fff2f2)', pickup: false, image: 'https://images.unsplash.com/photo-1593504049359-74330189a345?auto=format&fit=crop&w=600&h=400&q=80' },
+    { id: 'p2', name: 'Familiar + Papas', desc: 'Pizza familiar + papas grandes.', emoji: '🍕🍟', was: 95000, now: 79000, tag: '-17%', bg: 'linear-gradient(135deg,#fff,#fff8e8)', pickup: false, image: 'https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?auto=format&fit=crop&w=600&h=400&q=80' },
+    { id: 'p3', name: 'Combo Pareja', desc: '2 medianas + 2 bebidas.', emoji: '❤️🍕', was: 88000, now: 72000, tag: '-18%', bg: 'linear-gradient(135deg,#fff,#fff2f2)', pickup: false, image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&h=400&q=80' },
+    { id: 'p4', name: 'Promo Retiro en Local', desc: 'Una grande retirándola vos.', emoji: '🏪🍕', was: 48000, now: 39000, tag: '-19%', bg: 'linear-gradient(135deg,#fff,#eef7ef)', pickup: true, image: 'https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=600&h=400&q=80' },
   ];
 
   benefits = [
