@@ -27,6 +27,7 @@ a{text-decoration:none;color:inherit}
 @keyframes spinslow{to{transform:rotate(360deg)}}
 @keyframes pop{0%{transform:translate(-50%,16px) scale(.92);opacity:0}100%{transform:translate(-50%,0) scale(1);opacity:1}}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+h2.yp-section-h2{transition:font-size .2s}
 @media(max-width:1100px){
  .yp-h1{font-size:54px !important}
  .yp-hero-pizza{width:380px !important;height:380px !important}
@@ -41,39 +42,74 @@ a{text-decoration:none;color:inherit}
  .yp-2col{grid-template-columns:1fr !important;padding:30px !important}
  .yp-steps{grid-template-columns:repeat(2,1fr) !important}
  .yp-section{padding:60px 20px !important}
- .yp-h1{font-size:48px !important}
+ .yp-h1{font-size:46px !important}
  .yp-section-h2{font-size:36px !important}
  .yp-hero-pizza{width:340px !important;height:340px !important}
  .yp-retiro-art{min-height:260px !important}
+ .yp-header-inner{gap:14px !important;padding:10px 16px !important}
+ .yp-header-cta{padding:10px 16px !important;font-size:14px !important}
 }
 @media(max-width:720px){
- .yp-h1{font-size:38px !important}
+ .yp-h1{font-size:36px !important}
  .yp-hero-pizza{width:280px !important;height:280px !important}
  .yp-section-h2{font-size:30px !important}
  .yp-promo-header{flex-direction:column;align-items:flex-start !important}
- .yp-stats > div:not([style*="width:1px"]){flex:1;min-width:96px}
+ .yp-stats > div:not(.yp-stat-sep){flex:1;min-width:96px}
+ .yp-header-brand-text{font-size:20px !important}
+ .yp-header-logo{width:42px !important;height:42px !important}
+ .yp-hero p{font-size:17px !important}
+ .yp-cats-row{gap:8px !important}
+ .yp-cats-row button{padding:9px 14px !important;font-size:14px !important}
 }
 @media(max-width:560px){
- .yp-h1{font-size:34px !important}
+ .yp-h1{font-size:32px !important;line-height:1.05}
  .yp-section{padding:46px 16px !important}
- .yp-hero-pizza{width:240px !important;height:240px !important}
+ .yp-hero-pizza{width:250px !important;height:250px !important}
  .yp-steps{grid-template-columns:1fr !important}
  .yp-2col{padding:24px !important;border-radius:22px !important}
  .yp-section-h2{font-size:26px !important}
  .yp-pizza-img{width:140px !important;height:140px !important;border-width:6px !important}
  .yp-header-cta{display:none !important}
  .yp-stats{gap:14px !important}
- .yp-stats > div[style*="width:1px"]{display:none !important}
+ .yp-stats > .yp-stat-sep{display:none !important}
  .yp-retiro-img{width:100% !important;max-width:340px;height:240px !important}
- .yp-promo-img{height:130px !important}
- .yp-hero-section{padding:40px 16px 60px !important}
+ .yp-promo-img{height:140px !important}
+ .yp-hero-section{padding:36px 16px 56px !important}
  .yp-extras-card{padding:30px 22px !important;border-radius:22px !important}
+ .yp-header-inner{padding:9px 14px !important;gap:10px !important}
+ .yp-header-brand-text{font-size:18px !important}
+ .yp-header-logo{width:38px !important;height:38px !important}
+ .yp-cart-btn{width:42px !important;height:42px !important;font-size:18px !important}
+ .yp-burger{width:42px !important;height:42px !important;font-size:20px !important}
+ .yp-hero p{font-size:16px !important;margin-top:14px !important}
+ .yp-hero-badge{font-size:12px !important;padding:7px 12px !important}
+ .yp-stats .yp-disp{font-size:22px !important}
+ .yp-pizza-card{border-radius:20px !important}
+ .yp-pizza-name{font-size:19px !important}
+ .yp-promo-card{border-radius:20px !important}
+ .yp-cta-row{flex-direction:column;width:100%;gap:10px}
+ .yp-cta-row > a{width:100%;justify-content:center;font-size:16px !important;padding:14px 22px !important}
+ .yp-footer-map{height:100px !important}
+ footer{padding:44px 18px 24px !important}
+ .yp-extras-title{font-size:28px !important}
 }
 @media(max-width:420px){
- .yp-h1{font-size:30px !important}
- .yp-disp[style*="font-size:22px"]{font-size:19px !important}
+ .yp-h1{font-size:28px !important}
  .yp-hero-pizza{width:220px !important;height:220px !important}
- .yp-cta-row a{font-size:15px !important;padding:13px 20px !important}
+ .yp-cats-row button{padding:8px 12px !important;font-size:13px !important}
+ .yp-pizza-img{width:130px !important;height:130px !important}
+ .yp-section-h2{font-size:24px !important}
+ .yp-header-brand-text{font-size:16px !important}
+ .yp-header-logo{width:34px !important;height:34px !important}
+ .yp-cart-btn{width:38px !important;height:38px !important}
+ .yp-burger{width:38px !important;height:38px !important}
+ .yp-stats .yp-disp{font-size:20px !important}
+}
+@media(max-width:360px){
+ .yp-h1{font-size:26px !important}
+ .yp-section{padding:36px 12px !important}
+ .yp-header-inner{padding:8px 10px !important;gap:8px !important}
+ .yp-hero-pizza{width:200px !important;height:200px !important}
 }
 </style>
 </helmet>
@@ -82,10 +118,10 @@ a{text-decoration:none;color:inherit}
 
   <!-- ============ HEADER ============ -->
   <header data-screen-label="Header" style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.9);backdrop-filter:blur(14px);border-bottom:1px solid #f0ece6">
-    <div style="max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:22px;padding:11px 24px">
-      <a href="#inicio" style="display:flex;align-items:center;gap:11px;flex-shrink:0">
-        <img src="assets/logo-yummy.png" alt="Yummy Pizza" style="width:50px;height:50px;object-fit:contain;border-radius:12px;mix-blend-mode:multiply"/>
-        <span class="yp-disp" style="font-size:23px;letter-spacing:-.01em"><span style="color:#E63946">Yummy</span> <span style="color:#222222">Pizza</span></span>
+    <div class="yp-header-inner" style="max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:22px;padding:11px 24px">
+      <a href="#inicio" style="display:flex;align-items:center;gap:11px;flex-shrink:0;min-width:0">
+        <img src="assets/logo-yummy.png" alt="Yummy Pizza" class="yp-header-logo" style="width:50px;height:50px;object-fit:contain;border-radius:12px;mix-blend-mode:multiply;flex-shrink:0"/>
+        <span class="yp-disp yp-header-brand-text" style="font-size:23px;letter-spacing:-.01em;white-space:nowrap"><span style="color:#E63946">Yummy</span> <span style="color:#222222">Pizza</span></span>
       </a>
       <nav class="yp-nav-links" style="align-items:center;gap:22px;margin-left:14px;font-weight:600;font-size:15px;color:#444">
         <a href="#inicio" style="transition:color .15s" style-hover="color:#E63946">Inicio</a>
@@ -96,14 +132,14 @@ a{text-decoration:none;color:inherit}
         <a href="#nosotros" style="transition:color .15s" style-hover="color:#E63946">Nosotros</a>
         <a href="#contacto" style="transition:color .15s" style-hover="color:#E63946">Contacto</a>
       </nav>
-      <div style="margin-left:auto;display:flex;align-items:center;gap:12px">
-        <button onClick="{{ openCart }}" style="position:relative;width:46px;height:46px;border-radius:14px;background:#F7F7F7;display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;transition:background .15s,transform .15s" style-hover="background:#efe9e2;transform:translateY(-1px)" style-active="transform:scale(.94)">
+      <div style="margin-left:auto;display:flex;align-items:center;gap:12px;flex-shrink:0">
+        <button onClick="{{ openCart }}" class="yp-cart-btn" style="position:relative;width:46px;height:46px;border-radius:14px;background:#F7F7F7;display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;transition:background .15s,transform .15s;flex-shrink:0" style-hover="background:#efe9e2;transform:translateY(-1px)" style-active="transform:scale(.94)">
           🛒
           <sc-if value="{{ count }}" hint-placeholder-val="{{ true }}">
             <span style="position:absolute;top:-5px;right:-5px;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:#E63946;color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;border:2px solid #fff">{{ count }}</span>
           </sc-if>
         </button>
-        <a href="#menu" class="yp-disp" style="display:inline-flex;align-items:center;gap:8px;background:#E63946;color:#fff;border-radius:999px;padding:11px 22px;font-size:16px;cursor:pointer;box-shadow:0 10px 22px rgba(230,57,70,0.32);transition:transform .15s,box-shadow .15s" style-hover="transform:translateY(-2px);box-shadow:0 16px 30px rgba(230,57,70,0.42)" style-active="transform:translateY(1px) scale(.98)">🍕 Pedir Ahora</a>
+        <a href="#menu" class="yp-disp yp-header-cta" style="display:inline-flex;align-items:center;gap:8px;background:#E63946;color:#fff;border-radius:999px;padding:11px 22px;font-size:16px;cursor:pointer;box-shadow:0 10px 22px rgba(230,57,70,0.32);transition:transform .15s,box-shadow .15s;white-space:nowrap" style-hover="transform:translateY(-2px);box-shadow:0 16px 30px rgba(230,57,70,0.42)" style-active="transform:translateY(1px) scale(.98)">🍕 Pedir Ahora</a>
         <button class="yp-burger" onClick="{{ toggleNav }}" style="width:46px;height:46px;border-radius:14px;background:#F7F7F7;align-items:center;justify-content:center;font-size:22px;cursor:pointer">☰</button>
       </div>
     </div>
@@ -123,7 +159,7 @@ a{text-decoration:none;color:inherit}
   <section id="inicio" data-screen-label="Hero" class="yp-section yp-hero-section" style="padding:60px 24px 84px;background:radial-gradient(circle at 82% 18%,#fff4e0 0%,#ffffff 58%)">
     <div class="yp-hero" style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center">
       <div>
-        <span style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #ffe1c2;color:#E63946;font-weight:800;font-size:13px;padding:8px 14px;border-radius:999px;box-shadow:0 6px 16px rgba(0,0,0,0.05);white-space:nowrap">🛵 Te la llevamos — ¡recién horneada!</span>
+        <span class="yp-hero-badge" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #ffe1c2;color:#E63946;font-weight:800;font-size:13px;padding:8px 14px;border-radius:999px;box-shadow:0 6px 16px rgba(0,0,0,0.05);white-space:nowrap">🛵 Te la llevamos — ¡recién horneada!</span>
         <h1 class="yp-h1 yp-disp" style="font-size:64px;line-height:1;letter-spacing:-.02em;margin:18px 0 0;color:#222222">{{ heroTitle }}</h1>
         <p style="font-size:19px;color:#5c574f;max-width:470px;margin:20px 0 0;line-height:1.55">Delivery rápido o retirala cuando quieras. Elegí tu pizza favorita y pedí en menos de 2 minutos.</p>
         <div class="yp-cta-row" style="display:flex;flex-wrap:wrap;gap:14px;margin-top:30px">
@@ -132,9 +168,9 @@ a{text-decoration:none;color:inherit}
         </div>
         <div class="yp-stats" style="display:flex;gap:26px;margin-top:34px;flex-wrap:wrap">
           <div><div class="yp-disp" style="font-size:27px;color:#222">25 min</div><div style="font-size:13px;color:#8a847b;font-weight:600">Delivery promedio</div></div>
-          <div style="width:1px;background:#eee"></div>
+          <div class="yp-stat-sep" style="width:1px;background:#eee"></div>
           <div><div class="yp-disp" style="font-size:27px;color:#F4B400">4.9 ★</div><div style="font-size:13px;color:#8a847b;font-weight:600">+3.200 reseñas</div></div>
-          <div style="width:1px;background:#eee"></div>
+          <div class="yp-stat-sep" style="width:1px;background:#eee"></div>
           <div><div class="yp-disp" style="font-size:27px;color:#43A047">10% off</div><div style="font-size:13px;color:#8a847b;font-weight:600">Retirando en local</div></div>
         </div>
       </div>
@@ -167,10 +203,10 @@ a{text-decoration:none;color:inherit}
   <!-- ============ PROMOCIONES ============ -->
   <section id="promos" data-reveal class="yp-section" style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;padding:80px 24px">
     <div style="max-width:1240px;margin:0 auto">
-      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:32px">
+      <div class="yp-promo-header" style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:32px">
         <div>
           <span style="color:#E63946;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase">Ofertas del día</span>
-          <h2 class="yp-disp" style="font-size:44px;letter-spacing:-.02em;margin-top:6px">Promociones imperdibles 🔥</h2>
+          <h2 class="yp-disp yp-section-h2" style="font-size:44px;letter-spacing:-.02em;margin-top:6px">Promociones imperdibles 🔥</h2>
         </div>
         <p style="color:#8a847b;max-width:340px;font-size:15px">Combos pensados para compartir. Las promos de retiro tienen descuentos exclusivos.</p>
       </div>
@@ -202,10 +238,10 @@ a{text-decoration:none;color:inherit}
     <div style="max-width:1240px;margin:0 auto">
       <div style="text-align:center;margin-bottom:24px">
         <span style="color:#E63946;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase">Nuestro menú</span>
-        <h2 class="yp-disp" style="font-size:46px;letter-spacing:-.02em;margin-top:6px">Elegí tu pizza 🍕</h2>
+        <h2 class="yp-disp yp-section-h2" style="font-size:46px;letter-spacing:-.02em;margin-top:6px">Elegí tu pizza 🍕</h2>
         <p style="color:#8a847b;margin-top:8px">Seleccioná el tamaño y agregala al carrito. El precio se actualiza al instante.</p>
       </div>
-      <div id="delivery" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:32px">
+      <div id="delivery" class="yp-cats-row" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:32px">
         <sc-for list="{{ categories }}" as="c" hint-placeholder-count="9">
           <button onClick="{{ c.onClick }}" style="{{ c.btnStyle }}">{{ c.label }}</button>
         </sc-for>
@@ -245,11 +281,11 @@ a{text-decoration:none;color:inherit}
 
   <!-- ============ EXTRAS ============ -->
   <section data-reveal class="yp-section" style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;padding:0 24px 80px">
-    <div style="max-width:1240px;margin:0 auto;background:#222222;border-radius:30px;padding:44px 36px;color:#fff">
+    <div class="yp-extras-card" style="max-width:1240px;margin:0 auto;background:#222222;border-radius:30px;padding:44px 36px;color:#fff">
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:24px">
         <div>
           <span style="color:#F4B400;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase">Personalizá</span>
-          <h2 class="yp-disp" style="font-size:36px;margin-top:4px">Sumale extras 🧀</h2>
+          <h2 class="yp-disp yp-section-h2 yp-extras-title" style="font-size:36px;margin-top:4px">Sumale extras 🧀</h2>
         </div>
         <p style="color:#bdb7ae;max-width:340px;font-size:14px">Hacé tu pizza única. Tocá un extra para agregarlo a tu pedido.</p>
       </div>
@@ -269,7 +305,7 @@ a{text-decoration:none;color:inherit}
     <div class="yp-2col" style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:linear-gradient(120deg,#ffffff,#fff5e6);border:1px solid #f0ece6;border-radius:30px;padding:44px">
       <div>
         <span style="display:inline-flex;align-items:center;gap:7px;background:#43A047;color:#fff;font-weight:800;font-size:13px;padding:7px 13px;border-radius:999px">🏪 Retiro en Local</span>
-        <h2 class="yp-disp" style="font-size:42px;letter-spacing:-.02em;margin:16px 0 0;line-height:1.04">Retirá tu pedido y ahorrá.</h2>
+        <h2 class="yp-disp yp-section-h2" style="font-size:42px;letter-spacing:-.02em;margin:16px 0 0;line-height:1.04">Retirá tu pedido y ahorrá.</h2>
         <p style="color:#5c574f;font-size:16px;margin-top:14px;line-height:1.55;max-width:430px">Quienes retiran en el local acceden a <strong>promociones exclusivas</strong> y se saltan la fila. Pedís online, te avisamos cuando está lista y la retirás sin esperas.</p>
         <div style="display:flex;flex-direction:column;gap:12px;margin-top:22px">
           <div style="display:flex;align-items:center;gap:11px;font-weight:600;color:#333"><span style="width:30px;height:30px;border-radius:50%;background:#e8f5e9;display:flex;align-items:center;justify-content:center;color:#43A047">✓</span>Hasta 10% de descuento retirando</div>
@@ -291,7 +327,7 @@ a{text-decoration:none;color:inherit}
     <div style="max-width:1240px;margin:0 auto">
       <div style="text-align:center;margin-bottom:38px">
         <span style="color:#E63946;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase">Fácil y rápido</span>
-        <h2 class="yp-disp" style="font-size:44px;letter-spacing:-.02em;margin-top:6px">¿Cómo funciona?</h2>
+        <h2 class="yp-disp yp-section-h2" style="font-size:44px;letter-spacing:-.02em;margin-top:6px">¿Cómo funciona?</h2>
       </div>
       <div class="yp-steps" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
         <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
@@ -310,7 +346,7 @@ a{text-decoration:none;color:inherit}
   <section id="nosotros" data-reveal class="yp-section" style="opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;padding:80px 24px">
     <div style="max-width:920px;margin:0 auto;text-align:center">
       <span style="color:#E63946;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase">Opiniones</span>
-      <h2 class="yp-disp" style="font-size:44px;letter-spacing:-.02em;margin-top:6px">Clientes felices ⭐</h2>
+      <h2 class="yp-disp yp-section-h2" style="font-size:44px;letter-spacing:-.02em;margin-top:6px">Clientes felices ⭐</h2>
       <div style="overflow:hidden;margin-top:34px;border-radius:26px">
         <div style="display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1);transform:{{ trackTransform }}">
           <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="4">
@@ -340,7 +376,7 @@ a{text-decoration:none;color:inherit}
     <div style="max-width:760px;margin:0 auto">
       <div style="text-align:center;margin-bottom:32px">
         <span style="color:#E63946;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase">Ayuda</span>
-        <h2 class="yp-disp" style="font-size:42px;letter-spacing:-.02em;margin-top:6px">Preguntas frecuentes</h2>
+        <h2 class="yp-disp yp-section-h2" style="font-size:42px;letter-spacing:-.02em;margin-top:6px">Preguntas frecuentes</h2>
       </div>
       <div style="display:flex;flex-direction:column;gap:12px">
         <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
@@ -392,7 +428,7 @@ a{text-decoration:none;color:inherit}
         </div>
         <div>
           <div class="yp-disp" style="font-size:16px;margin-bottom:14px;color:#F4B400">Nuestro local</div>
-          <div style="border-radius:16px;overflow:hidden;border:1px solid #3a3a3a;height:120px;position:relative">
+          <div class="yp-footer-map" style="border-radius:16px;overflow:hidden;border:1px solid #3a3a3a;height:120px;position:relative">
             <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80" alt="Nuestro local Yummy Pizza" style="width:100%;height:100%;object-fit:cover"/>
             <span style="position:absolute;bottom:8px;left:10px;background:rgba(0,0,0,0.65);color:#fff;font-size:11px;padding:4px 8px;border-radius:6px;font-weight:700">📍 Av. Mariscal López 1234</span>
           </div>
