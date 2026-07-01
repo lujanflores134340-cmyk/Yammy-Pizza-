@@ -316,7 +316,7 @@ h2.yp-section-h2{transition:font-size .2s}
       </div>
       <div class="yp-retiro-art" style="position:relative;display:flex;align-items:center;justify-content:center;min-height:320px">
         <div style="position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,#e8f5e9,transparent 70%)"></div>
-        <img src="assets/pizza-bacon.png" alt="Pizza Bacon Lovers lista para retirar" class="yp-retiro-img" loading="lazy" style="width:380px;height:300px;object-fit:cover;object-position:center center;border-radius:24px;box-shadow:0 22px 40px rgba(0,0,0,0.18);position:relative;z-index:1;animation:bob 5s ease-in-out infinite;background:#f7f2ea"/>
+        <img src="assets/pizza-bacon.jpg" alt="Pizza Bacon Lovers lista para retirar" class="yp-retiro-img" loading="lazy" style="width:380px;height:300px;object-fit:cover;object-position:center center;border-radius:24px;box-shadow:0 22px 40px rgba(0,0,0,0.18);position:relative;z-index:1;animation:bob 5s ease-in-out infinite;background:#f7f2ea"/>
         <span style="position:absolute;top:8%;left:4%;z-index:2;background:#fff;border:1px solid #eee;border-radius:14px;padding:10px 16px;font-weight:800;font-size:13px;color:#43A047;box-shadow:0 10px 22px rgba(0,0,0,0.12);animation:bob 4s ease-in-out .5s infinite">¡Tu pedido está listo! 🎉</span>
       </div>
     </div>
@@ -536,18 +536,18 @@ class Component extends DCLogic {
   ];
 
   pizzasData = [
-    { id: 'muzza', name: 'Muzzarella Clásica', desc: 'La de siempre, la que nunca falla.', ingredients: 'Salsa, muzzarella, orégano', base: 28000, cats: ['clasicas','favoritas'], badge: 'Más vendida', badgeColor: '#E63946', top: 'cheese', image: 'assets/pizza-muzzarella.png' },
-    { id: 'napo', name: 'Napolitana', desc: 'Tomate fresco y ajo, bien italiana.', ingredients: 'Muzza, tomate, ajo, albahaca', base: 32000, cats: ['clasicas'], top: 'tomato', image: 'assets/pizza-napolitana.png' },
-    { id: 'pepe', name: 'Pepperoni Fuego', desc: 'Doble pepperoni para los intensos.', ingredients: 'Muzza, pepperoni, ají molido', base: 38000, cats: ['picantes','favoritas'], badge: 'Picante', badgeColor: '#E63946', top: 'pepperoni', image: 'assets/pizza-pepperoni.png' },
-    { id: 'diabla', name: 'Diabla', desc: 'Picante de verdad, no apta para tímidos.', ingredients: 'Muzza, salame, jalapeño, chili', base: 40000, cats: ['picantes'], badge: 'Picante', badgeColor: '#E63946', top: 'pepperoni', image: 'assets/pizza-diabla.png' },
-    { id: 'cuatro', name: 'Cuatro Quesos', desc: 'Una fiesta de quesos derretidos.', ingredients: 'Muzza, provolone, azul, parmesano', base: 42000, cats: ['queso','favoritas'], badge: 'Mucho queso', badgeColor: '#F4B400', top: 'cheese', image: 'assets/pizza-cuatro-quesos.png' },
-    { id: 'provo', name: 'Provolone', desc: 'Provolone fundido y orégano.', ingredients: 'Muzza, provolone, orégano', base: 39000, cats: ['queso'], top: 'cheese', image: 'assets/pizza-provolone.png' },
-    { id: 'casa', name: 'Especial de la Casa', desc: 'Nuestra receta secreta, cargada de todo.', ingredients: 'Muzza, jamón, morrón, huevo, aceitunas', base: 45000, cats: ['especiales'], badge: 'Nueva', badgeColor: '#43A047', top: 'mixed', image: 'assets/pizza-especial.png' },
-    { id: 'bacon', name: 'Bacon Lovers', desc: 'Tocino crocante en cada bocado.', ingredients: 'Muzza, bacon, cebolla, BBQ', base: 48000, cats: ['especiales','premium'], top: 'bacon', image: 'assets/pizza-bacon.png' },
+    { id: 'muzza', name: 'Muzzarella Clásica', desc: 'La de siempre, la que nunca falla.', ingredients: 'Salsa, muzzarella, orégano', base: 28000, cats: ['clasicas','favoritas'], badge: 'Más vendida', badgeColor: '#E63946', top: 'cheese', image: 'assets/pizza-muzzarella.jpg' },
+    { id: 'napo', name: 'Napolitana', desc: 'Tomate fresco y ajo, bien italiana.', ingredients: 'Muzza, tomate, ajo, albahaca', base: 32000, cats: ['clasicas'], top: 'tomato', image: 'assets/pizza-napolitana.jpg' },
+    { id: 'pepe', name: 'Pepperoni Fuego', desc: 'Doble pepperoni para los intensos.', ingredients: 'Muzza, pepperoni, ají molido', base: 38000, cats: ['picantes','favoritas'], badge: 'Picante', badgeColor: '#E63946', top: 'pepperoni', image: 'assets/pizza-pepperoni.jpg' },
+    { id: 'diabla', name: 'Diabla', desc: 'Picante de verdad, no apta para tímidos.', ingredients: 'Muzza, salame, jalapeño, chili', base: 40000, cats: ['picantes'], badge: 'Picante', badgeColor: '#E63946', top: 'pepperoni', image: 'assets/pizza-diabla.jpg' },
+    { id: 'cuatro', name: 'Cuatro Quesos', desc: 'Una fiesta de quesos derretidos.', ingredients: 'Muzza, provolone, azul, parmesano', base: 42000, cats: ['queso','favoritas'], badge: 'Mucho queso', badgeColor: '#F4B400', top: 'cheese', image: 'assets/pizza-cuatro-quesos.jpg' },
+    { id: 'provo', name: 'Provolone', desc: 'Provolone fundido y orégano.', ingredients: 'Muzza, provolone, orégano', base: 39000, cats: ['queso'], top: 'cheese', image: 'assets/pizza-provolone.jpg' },
+    { id: 'casa', name: 'Especial de la Casa', desc: 'Nuestra receta secreta, cargada de todo.', ingredients: 'Muzza, jamón, morrón, huevo, aceitunas', base: 45000, cats: ['especiales'], badge: 'Nueva', badgeColor: '#43A047', top: 'mixed', image: 'assets/pizza-especial.jpg' },
+    { id: 'bacon', name: 'Bacon Lovers', desc: 'Tocino crocante en cada bocado.', ingredients: 'Muzza, bacon, cebolla, BBQ', base: 48000, cats: ['especiales','premium'], top: 'bacon', image: 'assets/pizza-bacon.jpg' },
     { id: 'suprema', name: 'Suprema Premium', desc: 'Cargada de ingredientes de primera.', ingredients: 'Muzza, lomo, champiñón, morrón, aceitunas', base: 55000, cats: ['premium','favoritas'], badge: 'Premium', badgeColor: '#222222', top: 'premium', image: 'assets/pizza-suprema.jpg' },
-    { id: 'veg', name: 'Vegetariana Huerta', desc: 'Frescura de la huerta en cada porción.', ingredients: 'Muzza, zucchini, morrón, rúcula, cherry', base: 36000, cats: ['vegetarianas'], badge: 'Vegetariana', badgeColor: '#43A047', top: 'veggie', image: 'assets/pizza-vegetariana.png' },
-    { id: 'hawai', name: 'Hawaiana', desc: 'El dúo dulce-salado que divide al mundo.', ingredients: 'Muzza, jamón, ananá', base: 40000, cats: ['gourmet'], top: 'hawaiana', image: 'assets/pizza-hawaiana.png' },
-    { id: 'trufa', name: 'Trufa & Hongos', desc: 'Hongos salteados y aceite de trufa.', ingredients: 'Muzza, portobello, trufa, parmesano', base: 58000, cats: ['gourmet','premium'], badge: 'Gourmet', badgeColor: '#F4B400', top: 'mushroom', image: 'assets/pizza-trufa.png' },
+    { id: 'veg', name: 'Vegetariana Huerta', desc: 'Frescura de la huerta en cada porción.', ingredients: 'Muzza, zucchini, morrón, rúcula, cherry', base: 36000, cats: ['vegetarianas'], badge: 'Vegetariana', badgeColor: '#43A047', top: 'veggie', image: 'assets/pizza-vegetariana.jpg' },
+    { id: 'hawai', name: 'Hawaiana', desc: 'El dúo dulce-salado que divide al mundo.', ingredients: 'Muzza, jamón, ananá', base: 40000, cats: ['gourmet'], top: 'hawaiana', image: 'assets/pizza-hawaiana.jpg' },
+    { id: 'trufa', name: 'Trufa & Hongos', desc: 'Hongos salteados y aceite de trufa.', ingredients: 'Muzza, portobello, trufa, parmesano', base: 58000, cats: ['gourmet','premium'], badge: 'Gourmet', badgeColor: '#F4B400', top: 'mushroom', image: 'assets/pizza-trufa.jpg' },
   ];
 
   extrasData = [
@@ -563,10 +563,10 @@ class Component extends DCLogic {
   ];
 
   promosData = [
-    { id: 'p1', name: '2 Muzzarellas + Gaseosa', desc: 'Para compartir en casa.', emoji: '🍕🍕', was: 84000, now: 69000, tag: '-18%', bg: 'linear-gradient(135deg,#fff,#fff2f2)', pickup: false, image: 'assets/pizza-muzzarella.png' },
-    { id: 'p2', name: 'Familiar + Papas', desc: 'Pizza familiar + papas grandes.', emoji: '🍕🍟', was: 95000, now: 79000, tag: '-17%', bg: 'linear-gradient(135deg,#fff,#fff8e8)', pickup: false, image: 'assets/pizza-napolitana.png' },
-    { id: 'p3', name: 'Combo Pareja', desc: '2 medianas + 2 bebidas.', emoji: '❤️🍕', was: 88000, now: 72000, tag: '-18%', bg: 'linear-gradient(135deg,#fff,#fff2f2)', pickup: false, image: 'assets/pizza-pepperoni.png' },
-    { id: 'p4', name: 'Promo Retiro en Local', desc: 'Una grande retirándola vos.', emoji: '🏪🍕', was: 48000, now: 39000, tag: '-19%', bg: 'linear-gradient(135deg,#fff,#eef7ef)', pickup: true, image: 'assets/pizza-especial.png' },
+    { id: 'p1', name: '2 Muzzarellas + Gaseosa', desc: 'Para compartir en casa.', emoji: '🍕🍕', was: 84000, now: 69000, tag: '-18%', bg: 'linear-gradient(135deg,#fff,#fff2f2)', pickup: false, image: 'assets/pizza-muzzarella.jpg' },
+    { id: 'p2', name: 'Familiar + Papas', desc: 'Pizza familiar + papas grandes.', emoji: '🍕🍟', was: 95000, now: 79000, tag: '-17%', bg: 'linear-gradient(135deg,#fff,#fff8e8)', pickup: false, image: 'assets/pizza-napolitana.jpg' },
+    { id: 'p3', name: 'Combo Pareja', desc: '2 medianas + 2 bebidas.', emoji: '❤️🍕', was: 88000, now: 72000, tag: '-18%', bg: 'linear-gradient(135deg,#fff,#fff2f2)', pickup: false, image: 'assets/pizza-pepperoni.jpg' },
+    { id: 'p4', name: 'Promo Retiro en Local', desc: 'Una grande retirándola vos.', emoji: '🏪🍕', was: 48000, now: 39000, tag: '-19%', bg: 'linear-gradient(135deg,#fff,#eef7ef)', pickup: true, image: 'assets/pizza-especial.jpg' },
   ];
 
   benefits = [
