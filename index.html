@@ -140,7 +140,7 @@ a{text-decoration:none;color:inherit}
       </div>
       <div class="yp-hero-art" style="position:relative;display:flex;align-items:center;justify-content:center;min-height:400px">
         <div style="position:absolute;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle,#ffe7c0,transparent 66%)"></div>
-        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&h=800&q=85" alt="Pizza recién horneada" class="yp-hero-pizza" style="width:440px;height:440px;object-fit:cover;object-position:center center;border-radius:50%;position:relative;z-index:1;animation:floaty2 6s ease-in-out infinite;box-shadow:0 26px 50px rgba(140,80,20,0.32);border:10px solid #fff;background:#f7f2ea"/>
+        <img src="assets/pizza-muzzarella.png" alt="Pizza Muzzarella recién horneada" class="yp-hero-pizza" style="width:440px;height:440px;object-fit:cover;object-position:center center;border-radius:50%;position:relative;z-index:1;animation:floaty2 6s ease-in-out infinite;box-shadow:0 26px 50px rgba(140,80,20,0.32);border:10px solid #fff;background:#f7f2ea"/>
         <sc-if value="{{ floatIngredients }}" hint-placeholder-val="{{ true }}">
           <span style="position:absolute;top:4%;left:6%;font-size:40px;animation:floaty 5s ease-in-out infinite;filter:drop-shadow(0 8px 10px rgba(0,0,0,.15));z-index:2">🍅</span>
           <span style="position:absolute;top:12%;right:2%;font-size:38px;animation:floaty 6s ease-in-out .6s infinite;filter:drop-shadow(0 8px 10px rgba(0,0,0,.15));z-index:2">🧀</span>
@@ -527,10 +527,10 @@ class Component extends DCLogic {
   ];
 
   promosData = [
-    { id: 'p1', name: '2 Muzzarellas + Gaseosa', desc: 'Para compartir en casa.', emoji: '🍕🍕', was: 84000, now: 69000, tag: '-18%', bg: 'linear-gradient(135deg,#fff,#fff2f2)', pickup: false, image: 'https://images.unsplash.com/photo-1593504049359-74330189a345?auto=format&fit=crop&w=600&h=400&q=80' },
-    { id: 'p2', name: 'Familiar + Papas', desc: 'Pizza familiar + papas grandes.', emoji: '🍕🍟', was: 95000, now: 79000, tag: '-17%', bg: 'linear-gradient(135deg,#fff,#fff8e8)', pickup: false, image: 'https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?auto=format&fit=crop&w=600&h=400&q=80' },
-    { id: 'p3', name: 'Combo Pareja', desc: '2 medianas + 2 bebidas.', emoji: '❤️🍕', was: 88000, now: 72000, tag: '-18%', bg: 'linear-gradient(135deg,#fff,#fff2f2)', pickup: false, image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&h=400&q=80' },
-    { id: 'p4', name: 'Promo Retiro en Local', desc: 'Una grande retirándola vos.', emoji: '🏪🍕', was: 48000, now: 39000, tag: '-19%', bg: 'linear-gradient(135deg,#fff,#eef7ef)', pickup: true, image: 'https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=600&h=400&q=80' },
+    { id: 'p1', name: '2 Muzzarellas + Gaseosa', desc: 'Para compartir en casa.', emoji: '🍕🍕', was: 84000, now: 69000, tag: '-18%', bg: 'linear-gradient(135deg,#fff,#fff2f2)', pickup: false, image: 'assets/pizza-muzzarella.png' },
+    { id: 'p2', name: 'Familiar + Papas', desc: 'Pizza familiar + papas grandes.', emoji: '🍕🍟', was: 95000, now: 79000, tag: '-17%', bg: 'linear-gradient(135deg,#fff,#fff8e8)', pickup: false, image: 'assets/pizza-napolitana.png' },
+    { id: 'p3', name: 'Combo Pareja', desc: '2 medianas + 2 bebidas.', emoji: '❤️🍕', was: 88000, now: 72000, tag: '-18%', bg: 'linear-gradient(135deg,#fff,#fff2f2)', pickup: false, image: 'assets/pizza-pepperoni.png' },
+    { id: 'p4', name: 'Promo Retiro en Local', desc: 'Una grande retirándola vos.', emoji: '🏪🍕', was: 48000, now: 39000, tag: '-19%', bg: 'linear-gradient(135deg,#fff,#eef7ef)', pickup: true, image: 'assets/pizza-especial.png' },
   ];
 
   benefits = [
